@@ -1,0 +1,22 @@
+{
+  "name": "koop-elasticsearch",
+  "version": "0.0.1",
+  "description": "An ElasticSearch provider for koop ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/"
+  },
+  "dependencies": {
+    "koop-server": "*",
+    "config": "~0.4.35",
+    "ejs": "~1.0.0"
+  },
+  "author": "Andrew Turner",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "supertest": "~0.11.0"
+  }
+}
