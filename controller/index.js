@@ -43,5 +43,9 @@ Controller.featureservice = function(req, res){
     });
 };
 
+Controller.preview =  function(req, res){
+    res.render(__dirname + '/../views/index', { locals:{ id: req.params.id } });
+}
+
 module.exports = Controller;
 
