@@ -16,27 +16,27 @@ module.exports = {
     action: 'get'
   },
 
-  'get /elasticsearch/:id': {
+  'get /elasticsearch/:id/:dataset': {
     controller: 'elasticsearch',
     action: 'get'
   },
 
-  'get /elasticsearch/:id/preview': {
+  'get /elasticsearch/:id/:dataset/preview': {
     controller: 'elasticsearch',
     action: 'preview'
   },
 
-  'get /elasticsearch/:id/FeatureServer': {
+  'get /elasticsearch/:id/:dataset/FeatureServer': {
     controller: 'elasticsearch',
     action: 'featureservice'
   },
 
-  'get /elasticsearch/:id/FeatureServer/:layer': {
+  'get /elasticsearch/:id/:dataset/FeatureServer/:layer': {
     controller: 'elasticsearch',
     action: 'featureservice'
   },
 
-  'get /elasticsearch/:id/FeatureServer/:layer/:method': {
+  'get /elasticsearch/:id/:dataset/FeatureServer/:layer/:method': {
     controller: 'elasticsearch',
     action: 'featureservice'
   },

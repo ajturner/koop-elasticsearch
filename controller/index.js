@@ -20,7 +20,7 @@ Controller.Error = function(req, res){
 // 
 Controller.get = function(req, res){
     var key = ['Elasticsearch'];
-    Elasticsearch.find(req.params.id, req.query, function(err, data){
+    Elasticsearch.find(req.params.id, req.params.dataset, req.query, function(err, data){
       if (err){
         res.send(err, 500);
       } else {
@@ -33,7 +33,7 @@ Controller.featureservice = function(req, res){
     var callback = req.query.callback, self = this;
     delete req.query.callback;
 
-    Elasticsearch.find(req.params.id, req.query, function(err, data){
+    Elasticsearch.find(req.params.id, req.params.dataset, req.query, function(err, data){
       if (err) {
         res.send(err, 500);
       } else {
@@ -44,7 +44,7 @@ Controller.featureservice = function(req, res){
 };
 
 Controller.preview =  function(req, res){
-    res.render(__dirname + '/../views/index', { locals:{ id: req.params.id } });
+    res.render(__dirname + '/../views/index', { locals:{ id: req.params.id, dataset: req.params.dataset } });
 }
 
 module.exports = Controller;
